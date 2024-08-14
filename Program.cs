@@ -17,7 +17,7 @@ namespace XweetConsole
         static string tweetUrl = "https://api.twitter.com/2/tweets";
         static string uploadUrl = "https://upload.twitter.com/1.1/media/upload.json";
 
-        static async Task<string> GetTwitterOrOgImageFromUrl(string url)
+        static async Task<string> GetTwitterImageFromUrl(string url)
         {
             try
             {
@@ -221,7 +221,7 @@ namespace XweetConsole
 
             tweetText += " " + pageUrl + Environment.NewLine + textTags;
 
-            string imgUrl = await GetTwitterOrOgImageFromUrl(pageUrl);
+            string imgUrl = await GetTwitterImageFromUrl(pageUrl);
             await PostXweet(tweetText, imgUrl);
 
             await Task.Run(() => { });
