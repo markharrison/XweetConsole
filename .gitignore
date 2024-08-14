@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+#MH
+/Properties/launchSettings.json
+/appsettings.Development.json
+/package-lock.json
+.vscode/
